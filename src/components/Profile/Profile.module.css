@@ -1,0 +1,16 @@
+.profileItem {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.buttonProfile {
+    cursor: pointer;
+    width: 70px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.buttonProfile:hover {
+    border: 2px solid rgb(251, 74, 74);
+}

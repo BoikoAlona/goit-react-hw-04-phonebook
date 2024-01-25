@@ -1,0 +1,38 @@
+.form {
+    padding: 25px;
+    border: 1px solid black;
+    max-width: 520px;
+    margin: 30px auto;
+}
+
+.formLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.formLabelText {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.formInput {
+    font-size: 16px;
+}
+
+.button {
+    background-color: rgb(165, 165, 200);
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.button:hover {
+    background-color: rgb(100, 100, 196);
+}
+
+.button:focus {
+    background-color: rgb(100, 100, 196);
+}
