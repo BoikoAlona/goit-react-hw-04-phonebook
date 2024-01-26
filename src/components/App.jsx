@@ -47,20 +47,20 @@ export class App extends Component {
   };
 
   componentDidMount() {
-    const StringifiedContacts = localStorage.getItem('contacts');
-    const contacts = JSON.parse(StringifiedContacts) ?? [];
+    const stringifiedContacts = localStorage.getItem('contacts');
+    const contacts = JSON.parse(stringifiedContacts) ?? [];
     this.setState({ contacts });
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.contacts !== this.state.contacts) {
-      const StringifiedContacts = JSON.stringify(this.state.contacts);
-      localStorage.setItem('contacts', StringifiedContacts)
+      const stringifiedContacts = JSON.stringify(this.state.contacts);
+      localStorage.setItem('contacts', stringifiedContacts)
     }
   }
 
   render() {
-    const FilteredProfiles = this.state.contacts.filter(profile =>
+    const filteredProfiles = this.state.contacts.filter(profile =>
       profile.name
         .toLowerCase()
         .includes(this.state.filter.trim().toLowerCase())
@@ -73,7 +73,7 @@ export class App extends Component {
         <h2>Contacts</h2>
         <Filter value={this.state.filter} onChange={this.handleChangeFilter} />
         <ContactList
-          contacts={FilteredProfiles}
+          contacts={filteredProfiles}
           handleDeleteProfile={this.handleDeleteProfile}
         />
       </div>
