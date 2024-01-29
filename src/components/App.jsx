@@ -5,9 +5,9 @@ import { ContactList } from './ContactList/ContactList';
 import { nanoid } from 'nanoid';
 
 export const App = () => {
-  const [contacts, setContacts] = useState(
-    JSON.parse(localStorage.getItem('contacts')) ?? []
-  );
+  const [contacts, setContacts] = useState(() => {
+    return JSON.parse(localStorage.getItem('contacts')) ?? [];
+  });
   const [filter, setFilter] = useState('');
 
   const addFriend = formData => {
